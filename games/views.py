@@ -8,7 +8,7 @@ from .models import Game
 # Create your views here.
 
 
-class GameView(View):
+class Game_view(View):
     def get(self, request: HttpRequest, id) -> JsonResponse:
         game = get_object_or_404(Game, pk=id)
         return JsonResponse(game.to_dict())
